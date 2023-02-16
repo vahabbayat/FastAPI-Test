@@ -1,8 +1,8 @@
-runtime: python39
+runtime: python
+env: flex
 
-env_variables:
-  MY_VAR: "my_value"
+entrypoint: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
 
-handlers:
-- url: /.*
-  script: auto
+runtime_config:
+  python_version: 3
+  
