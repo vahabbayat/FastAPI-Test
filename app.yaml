@@ -1,13 +1,9 @@
 runtime: python39
 
-handlers:
-  # Serve static files from the "static" directory
-  - url: /static
-    static_dir: static
-
-  # Handle requests to the root URL "/"
-  - url: /.*
-    script: auto
-
 env_variables:
-  PORT: 8080
+  MY_VAR: "my_value"
+
+handlers:
+- url: /.*
+  script: auto
+
